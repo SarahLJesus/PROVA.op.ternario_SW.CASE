@@ -11,13 +11,19 @@
     */
 
     //Entrada
-
-
+    const tablet = Number(prompt(`Informe o preço do tablet que você deseja comprar.`));
+    const parcelas = Number(prompt(`Informe a quantidade de parcelas que você deseja financiar.`));
+    const tudo = tablet * parcelas;
     //Processamento
 
-    
-    //Saída
+    let mensagem = (parcelas == 1) ? `Não terá diferença no preço, custará R$ ${(tablet)}.`
+        : (parcelas <=5) ? `O preço final será de R$ ${(tablet * 1.03)}.`
+            : `O preço final será de R$ ${(tablet * 1.07)}.`;
 
+    alert(mensagem);
+
+    //Saída
+    //Não haverá diferença de preço.
     /*
     Para testar:
     Entradas: Preço do Tablet e Número de Parcelas

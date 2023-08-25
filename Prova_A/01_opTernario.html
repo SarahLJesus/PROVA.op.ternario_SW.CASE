@@ -13,14 +13,18 @@
     */
 
     //Entrada
+    const atraso = Number(prompt(`Informe com quantos dias de atraso a sua conta foi paga.`));
 
-    
     //Processamento
+    let mensagem = (atraso == 0) ? `Não terá multa, o custo será de R$ 0,00.`
+        : (atraso <= 10) ? `O custo será de R$ ${(atraso * 2.50)}.`
+            : (10 < atraso >= 20) ? `O custo será de R$ ${(atraso * 4)}.`
+                : `O custo será de R$ ${(atraso * 4.50)}.`;
 
-    
+    alert(mensagem);
     //Saída
 
-    
+
     /*
     Para testar:
     Entrada: Dias de atraso

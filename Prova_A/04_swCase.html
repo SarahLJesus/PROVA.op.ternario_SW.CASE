@@ -11,11 +11,27 @@
     */
 
     //Entrada
+    const lab = prompt(`Informe qual laboratório você deseja utilizar, sendo eles B1, B2, B3 e B4.`).trim().toLowerCase();
 
-    
     //Processamento
+    switch (lab) {
+        case "b1":
+            alert(`Laboratório B1: 20 computadores.`);
+            break;
+        case "b2":
+            alert(`Laboratório B2: 24 computadores.`);
+            break;
+        case "b3":
+            alert(`Laboratório B3: 40 computadores.`);
+            break;
+        case "b4":
+            alert(`Laboratório B4: 16 computadores.`);
+            break;
+        default:
+            alert(`Houve algum erro.`);
+            break;
+    }
 
-    
     //Saída
 
     /*

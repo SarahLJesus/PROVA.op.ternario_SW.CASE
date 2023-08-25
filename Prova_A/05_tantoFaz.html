@@ -2,7 +2,8 @@
 <script>
     // Tanto faz: Operador Ternário ou Switch...Case
     /*
-    Problema: Considere que uma pessoa foi comprar bebida para um evento. Considere que existem as seguintes opções de bebida, com seus respectivos preços por litro:
+    Problema: Considere que uma pessoa foi comprar bebida para um evento. Considere que existem as seguintes opções de bebida,
+    com seus respectivos preços por litro:
     - Refrigerante (RF): R$ 6,19
     - Suco (SU): R$ 9,80
     - Água (AG): R$ 5,00
@@ -13,11 +14,42 @@
     */
 
     //Entrada
+    const bebida = prompt(`Informe qual bebida você deseja comprar para o evento, sendo (RF) Refrigerante, (SU) Suco, (AG) Àgua e (CF) Café.`).trim().toLowerCase();
+    const quantidade = Number(prompt(`Informe a quantidade que você deseja comprar.`).replace(",", "."));
 
-    
     //Processamento
+    switch (quantidade < 150) {
+        case (bebida == "rf"):
+            alert(`Seu custo final será de R$ ${quantidade * 6.19}.`)
+            break;
+        case (bebida == "su"):
+            alert(`Seu custo final será de R$ ${quantidade * 9.8}.`)
+            break;
+        case (bebida == "ag"):
+            alert(`Seu custo final será de R$ ${quantidade * 5}.`)
+            break;
+        case (bebida == "cf"):
+            alert(`Seu custo final será de R$ ${quantidade * 10}.`)
+            break;
+    }
+    switch (quantidade > 150) {
+        case (bebida == "rf"):
+            alert(`Seu custo final será de R$ ${quantidade * 6.19 - (1.1)}.`)
+            break;
+        case (bebida == "su"):
+            alert(`Seu custo final será de R$ ${quantidade * 9.8 - (1.1)}.`)
+            break;
+        case (bebida == "ag"):
+            alert(`Seu custo final será de R$ ${quantidade * 5 - (1.1)}.`)
+            break;
+        case (bebida == "cf"):
+            alert(`Seu custo final será de R$ ${quantidade * 10 - (1.1)}.`)
+            break;
+        default:
+            alert(`Houve algum erro.`)
+            break;
+    }
 
-    
     //Saída
 
 
